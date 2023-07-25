@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20230412120151",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tax_exemp_section",
+  "fields": [
+    {
+      "fieldName": "taxExempSection",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxExempSectionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maxlimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TaxExempSection",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

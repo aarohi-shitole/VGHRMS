@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122154",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "appraisal_comments_review",
+  "fields": [
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appraisalReviewId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "refFormName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "AppraisalCommentsReview",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "employee",
+      "relationshipName": "employee",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

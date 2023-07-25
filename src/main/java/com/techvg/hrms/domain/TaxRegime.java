@@ -1,0 +1,156 @@
+package com.techvg.hrms.domain;
+
+import java.io.Serializable;
+import java.time.Instant;
+import javax.persistence.*;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
+
+/**
+ * A TaxRegime.
+ */
+@Entity
+@Table(name = "tax_regime")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@SuppressWarnings("common-java:DuplicatedBlocks")
+@SQLDelete(sql = "UPDATE tax_regime SET status='D' WHERE id=?")
+@Where(clause = "status != 'D'")
+public class TaxRegime extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "tax_regime_name")
+    private String taxRegimeName;
+
+    @Column(name = "status")
+    private String status;
+
+//    @Column(name = "company_id")
+//    private Long companyId;
+//
+//    @Column(name = "last_modified")
+//    private Instant lastModified;
+//
+//    @Column(name = "last_modified_by")
+//    private String lastModifiedBy;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public TaxRegime id(Long id) {
+        this.setId(id);
+        return this;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTaxRegimeName() {
+        return this.taxRegimeName;
+    }
+
+    public TaxRegime taxRegimeName(String taxRegimeName) {
+        this.setTaxRegimeName(taxRegimeName);
+        return this;
+    }
+
+    public void setTaxRegimeName(String taxRegimeName) {
+        this.taxRegimeName = taxRegimeName;
+    }
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    public TaxRegime status(String status) {
+        this.setStatus(status);
+        return this;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+//    public Long getCompanyId() {
+//        return this.companyId;
+//    }
+//
+//    public TaxRegime companyId(Long companyId) {
+//        this.setCompanyId(companyId);
+//        return this;
+//    }
+//
+//    public void setCompanyId(Long companyId) {
+//        this.companyId = companyId;
+//    }
+//
+//    public Instant getLastModified() {
+//        return this.lastModified;
+//    }
+//
+//    public TaxRegime lastModified(Instant lastModified) {
+//        this.setLastModified(lastModified);
+//        return this;
+//    }
+//
+//    public void setLastModified(Instant lastModified) {
+//        this.lastModified = lastModified;
+//    }
+//
+//    public String getLastModifiedBy() {
+//        return this.lastModifiedBy;
+//    }
+//
+//    public TaxRegime lastModifiedBy(String lastModifiedBy) {
+//        this.setLastModifiedBy(lastModifiedBy);
+//        return this;
+//    }
+//
+//    public void setLastModifiedBy(String lastModifiedBy) {
+//        this.lastModifiedBy = lastModifiedBy;
+//    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof TaxRegime)) {
+            return false;
+        }
+        return id != null && id.equals(((TaxRegime) o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        return getClass().hashCode();
+    }
+
+    // prettier-ignore
+    @Override
+    public String toString() {
+        return "TaxRegime{" +
+            "id=" + getId() +
+            ", taxRegimeName='" + getTaxRegimeName() + "'" +
+            ", status='" + getStatus() + "'" +
+            ", companyId=" + getCompanyId() +
+            ", lastModified='" + getLastModified() + "'" +
+            ", lastModifiedBy='" + getLastModifiedBy() + "'" +
+            "}";
+    }
+}

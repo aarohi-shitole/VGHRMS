@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122157",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "appraisal_evaluation",
+  "fields": [
+    {
+      "fieldName": "answerFlag",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "appraisalReviewId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "availablePoints",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "scoredPoints",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "remark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "AppraisalEvaluation",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "appraisalEvaluationParameter",
+      "relationshipName": "appraisalEvaluationParameter",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

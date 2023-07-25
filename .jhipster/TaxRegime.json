@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230412120154",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tax_regime",
+  "fields": [
+    {
+      "fieldName": "taxRegimeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TaxRegime",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

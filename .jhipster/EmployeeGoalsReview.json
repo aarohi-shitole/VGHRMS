@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122155",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "employee_goals_review",
+  "fields": [
+    {
+      "fieldName": "goalDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "goalCategory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "goaltype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "goalSetBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "appraisalReviewId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "EmployeeGoalsReview",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

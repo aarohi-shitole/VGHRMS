@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122150",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "performance_indicator",
+  "fields": [
+    {
+      "fieldName": "designationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "indicatorValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "PerformanceIndicator",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "masterPerformanceIndicator",
+      "relationshipName": "masterPerformanceIndicator",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20230412120156",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "techvg_role",
+  "fields": [
+    {
+      "fieldName": "roleName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TechvgRole",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "permissionName",
+      "otherEntityName": "techvgPermission",
+      "otherEntityRelationshipName": "techvgRole",
+      "ownerSide": true,
+      "relationshipName": "techvgPermission",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

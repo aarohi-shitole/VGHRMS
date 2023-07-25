@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PerformanceReview.
+    -->
+    <changeSet id="20230605122153-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="performance_indicator_id"
+                                 baseTableName="performance_review"
+                                 constraintName="fk_performance_review__performance_indicator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="performance_indicator"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122152",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "appraisal_review",
+  "fields": [
+    {
+      "fieldName": "reportingOfficer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "roDesignation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "AppraisalReview",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "employee",
+      "relationshipName": "employee",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

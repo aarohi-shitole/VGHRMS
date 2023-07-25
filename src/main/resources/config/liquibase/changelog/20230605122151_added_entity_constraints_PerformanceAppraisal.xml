@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PerformanceAppraisal.
+    -->
+    <changeSet id="20230605122151-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="appraisal_review_id"
+                                 baseTableName="performance_appraisal"
+                                 constraintName="fk_performance_appraisal__appraisal_review_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="appraisal_review"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity CustomLeavePolicy.
+    -->
+    <changeSet id="20230406114713-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="leave_policy_id"
+                                 baseTableName="custom_leave_policy"
+                                 constraintName="fk_custom_leave_policy__leave_policy_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="leave_policy"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="custom_leave_policy"
+                                 constraintName="fk_custom_leave_policy__employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+    </changeSet>
+</databaseChangeLog>

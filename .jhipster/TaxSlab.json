@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20230412120155",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tax_slab",
+  "fields": [
+    {
+      "fieldName": "slab",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amtFrom",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "amtTo",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "taxPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "taxRegimeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "taxSlabId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "TaxSlab",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

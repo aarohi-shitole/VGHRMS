@@ -1,0 +1,90 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122153",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "performance_review",
+  "fields": [
+    {
+      "fieldName": "appraisalReviewId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "employeeRemark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appraiserRemark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reviewerRemark",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "selfScored",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scoredByAppraiser",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scoredByReviewer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appraisalStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "submissionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "appraisalDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "reviewDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "target",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "targetAchived",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "PerformanceReview",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "performanceIndicator",
+      "relationshipName": "performanceIndicator",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

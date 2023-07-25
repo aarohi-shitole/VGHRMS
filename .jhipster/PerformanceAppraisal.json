@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20230605122151",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "performance_appraisal",
+  "fields": [
+    {
+      "fieldName": "employeeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "PerformanceAppraisal",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "appraisalReview",
+      "ownerSide": true,
+      "relationshipName": "appraisalReview",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
